@@ -57,11 +57,13 @@ def get_fp(smile):
 
 dataset = 'ALMANAC'
 # dataset = 'ONEIL'
-
+base_dir = os.path.dirname(__file__) 
+data_dir = os.path.join(base_dir, "Data")
+    
 if dataset == 'ONEIL':
-    drug_smiles_file = '/home/maosuwan/data/graphllm/Data/ONEIL-COSMIC/drug_smiles.csv'
+    drug_smiles_file = os.path.join(data_dir, "ONEIL-COSMIC", "drug_smiles.csv")
 else:
-    drug_smiles_file = '/home/maosuwan/data/graphllm/Data/ALMANAC-COSMIC/drug_smiles.csv'
+    drug_smiles_file = os.path.join(data_dir, "ALMANAC-COSMIC", "drug_smiles.csv")
     
 drug = pd.read_csv(drug_smiles_file, sep=',', header=0)
 drugid2smile = dict(zip(drug['pubchemid'], drug['isosmiles']))
