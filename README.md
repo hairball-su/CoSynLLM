@@ -25,15 +25,17 @@ CoSynLLM: an LLM-assisted predictive framework for predicting drug combination s
   
 # Run the code
 下载预训练模型
- ```
+```
 Please download it yourself from https://huggingface.co/sentence-transformers/all-mpnet-base-v2. The path name can be used as a reference 'pretrained_model/sentence-transformers/all-mpnet-base-v2'.
- ```
+```
+
 选择数据集，生成输入特征向量
- ```
+```
 dataset = 'ALMANAC'  # ONEIL or ALMANAC
 python gen_fp.py
 python gen_prompts.py
 ```
+
 运行主文件
  ```
 python fp_main.py -d ALMANAC -g 0  #d: dataset  g: gpu id
