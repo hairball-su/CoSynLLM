@@ -189,7 +189,13 @@ if __name__ == '__main__':
     # with open(f'{dataset_name}_drugcaption_dsr1.pkl', 'rb') as f:
         drug_caption_dict = pickle.load(f)
 
-    model = SentenceTransformer('pretrained_model/sentence-transformers/all-mpnet-base-v2', device = device)
+
+    model_path = 'pretrained_model/sentence-transformers/all-mpnet-base-v2'
+    if os.path.exists(model_path):
+        model = SentenceTransformer(model_path, device=device)
+    else:
+        model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2', device=device)
+
     drug2caption_emb = {}
     for key, value in drug_caption_dict.items():
         drug2caption_emb[key] =    model.encode( [ value ]).flatten()
