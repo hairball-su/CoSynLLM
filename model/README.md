@@ -1,1 +1,1 @@
-save model weights
+This folder is used to store model weights.
