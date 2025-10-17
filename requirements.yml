@@ -1,0 +1,34 @@
+name: CoSynLLM
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - numpy
+  - pandas
+  - scikit-learn
+  - torchvision
+  - torchaudio
+  - pytorch_geometric
+  - pytorch_cluster
+  - pytorch_scatter
+  - transformers
+  - tqdm
+  - rdkit
+  - scipy
+  - einops
+  - sentence-transformers
+  - lightly
+  - cudatoolkit=11.3
+  - pip
+  - pip:
+    - flagembedding
+    - peft
+    - accelerate
+    - datasets
+    - prettytable
+    - nitrous-ema
+    - map4
+
