@@ -4,7 +4,7 @@ import torch
 from torch_geometric.data import Data
 from rdkit import Chem
 import pandas as pd 
-
+import os
 import pickle
 
 from rdkit import Chem
