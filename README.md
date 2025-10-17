@@ -24,6 +24,9 @@ CoSynLLM: an LLM-assisted predictive framework for predicting drug combination s
 - rdkit 2024.3.2
   
 # Run the code
+下载预训练模型
+ ```
+Please download it yourself from https://huggingface.co/sentence-transformers/all-mpnet-base-v2. The path name can be used as a reference 'pretrained_model/sentence-transformers/all-mpnet-base-v2'.
 选择数据集，生成输入特征向量
  ```
 dataset = 'ALMANAC'  # ONEIL or ALMANAC
