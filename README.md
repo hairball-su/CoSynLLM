@@ -1,6 +1,10 @@
 # CoSynLLM
 CoSynLLM: an LLM-assisted predictive framework for predicting drug combination synergy
 
+![Overview of the CoSynLLM](https://raw.githubusercontent.com/hairball-su/CoSynLLM/main/overview.png)
+
+
+
 # File
 - Data/: the two dataset used in the experiments
 - model/: save the trained model weights
